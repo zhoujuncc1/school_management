@@ -1,0 +1,27 @@
+{% extends "school/base.html" %}
+{% block content %}
+
+<h2>{{ student.name }}</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<ul class="list-group">
+    <li class="list-group-item"><b>Name: </b>{{object.name}}</li>
+    <li class="list-group-item"><b>Birthday: </b>{{object.birthday}}</li>
+    <li class="list-group-item"><b>People: </b>{{object.people}}</li>
+    <li class="list-group-item"><b>School: </b>{{object.school}}</li>
+    <li class="list-group-item"><b>HomeAddress: </b>{{object.home_address}}</li>
+    <li class="list-group-item"><b>MotherName: </b>{{object.mother_name}}</li>
+    <li class="list-group-item"><b>MotherWork: </b>{{object.mother_work}}</li>
+    <li class="list-group-item"><b>FatherName: </b>{{object.father_name}}</li>
+    <li class="list-group-item"><b>FatherWork: </b>{{object.father_work}}</li>
+    <li class="list-group-item"><b>StartDate: </b>{{object.start_date}}</li>
+    <li class="list-group-item"><b>EndDate: </b>{{object.end_date}}</li>
+    <li class="list-group-item"><b>Class: </b>{{object.class_name}}</li>
+    <li class="list-group-item"><b>SkillLevel: </b>{{object.skill_level}}</li>
+    <li class="list-group-item"><b>Wechat: </b>{{object.wechat}}</li>
+    <li class="list-group-item"><b>QQ: </b>{{object.qq}}</li>
+    <li class="list-group-item"><b>MatricDate: </b>{{object.matric_date}}</li>
+    <li class="list-group-item"><b>Remarks: </b>{{object.remarks}}</li>
+</ul>
+{% endblock %}
+

@@ -4,7 +4,6 @@ from django.urls import reverse
 from .models import Student
 # Register your models here.
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name',)
     def view_on_site(self, obj):
         url = reverse('student:detail', args=(obj.pk,))
         return url

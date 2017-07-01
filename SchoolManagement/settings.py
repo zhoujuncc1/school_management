@@ -66,7 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'school.views.schoolname_processor',
+                'school.views.school_processor',
             ],
         },
     },
@@ -123,5 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-
 ADMIN_SITE_HEADER = "学校管理"
+
+MEDIA_ROOT = 'media'
+MEDIA_URL = 'media/'

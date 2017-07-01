@@ -17,10 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import TemplateView
 from django.conf import settings
+from django.conf.urls.static import static
 
 admin.site.site_header = settings.ADMIN_SITE_HEADER
 urlpatterns = [
     url(r"^$", TemplateView.as_view(template_name='school/base.html'), name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^student/', include('student.urls'))
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

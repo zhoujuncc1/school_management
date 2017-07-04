@@ -12,6 +12,6 @@ class DetailView(generic.DetailView):
     model = Student
     template_name = 'student/detail.html'
 
-class RegisterView(generic.edit.CreateView):
+class RegisterView(generic.CreateView):
 	form_class = StudentForm
 	template_name = 'student/student_form.html'

@@ -25,7 +25,7 @@ SECRET_KEY = 'utuuu1da*e3y8=-3ok2iahpt78m)ji34!4@6=y&0kr)^%(f7l!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["58.182.212.109", "localhost"]
 
 
 # Application definition
@@ -127,3 +127,5 @@ ADMIN_SITE_HEADER = "学校管理"
 
 MEDIA_ROOT = 'media'
 MEDIA_URL = 'media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

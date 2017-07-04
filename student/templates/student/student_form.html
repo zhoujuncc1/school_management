@@ -4,17 +4,23 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  {% load crispy_forms_tags %}
+  <style>
+  div#form_div{
+	padding: 50px 30px 50px 80px;
+}
+  </style>
 {% endblock %}
 
 {% block content %}
-<div class="container centered">
+ <div id='form_div'>
 <form action="" method="post">{% csrf_token %}
-    	{{ form | crispy}}
-    	<input type="submit" value="注册" />
+    {% load crispy_forms_tags %}
+    {{ form | crispy }}
+    <input type="submit" value="注册" />
 </form>
-</div></div>
-  <script>
+
+</div>
+<script>
   $( function() {
     $( ".datepicker" ).datepicker({
     showButtonPanel: true,
